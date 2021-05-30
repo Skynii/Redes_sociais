@@ -1,0 +1,95 @@
+body
+{
+  margin:0px;
+  padding: 0px;
+  height: 100vh;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+ul
+{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+ul li
+{/*deixou plano*/
+  position: relative;
+  list-style: none;
+  width: 90px;
+  height: 90px;
+  margin: 0 30px;
+  transform: rotate(-30deg) skew(25deg);
+  background:#ccc;
+  
+}
+
+ul li span
+{/*anima trocando a cor da letra*/
+  position:absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background:#000;
+  transition:0.5s;
+  display:flex !important;
+  align-items:center;
+  justify-content:center;
+  color: white;
+  font-size:50px !important; /*isso que fez ficar grande e no centro*/
+}
+
+ul li:hover span
+{ /*passar o mouse e deixa preta a sombra*/
+  box-shadow: -1px 1px 1px rgba(0,0,0,.1);
+}
+
+ul li:hover span:nth-child(5){/*levanta*/
+  transform: translate(40px, -40px);
+  opacity: 1;
+}
+
+ul li:hover span:nth-child(4){/*segunda camada levantando*/
+  transform: translate(30px, -30px);
+  opacity: 0.8;
+}
+
+ul li:hover span:nth-child(3){
+  transform: translate(20px, -20px);
+  opacity: 0.6;
+}
+
+ul li:hover span:nth-child(2){
+  transform: translate(10px, -10px);
+  opacity: 0.4;
+}
+
+ul li:hover span:nth-child(1){
+  transform: translate(0,0);
+  opacity: .2;
+}
+
+ul li:nth-child(1) span{/*adiciona cor*/
+  background: #3b5999;
+}
+
+ul li:nth-child(2) span{/*adiciona cor*/
+  background: #55acee;
+}
+
+ul li:nth-child(3) span{/*adiciona cor*/
+  background: #dd4b39;
+}
+
+ul li:nth-child(4) span{/*adiciona cor*/
+  background: #0077b5;
+}
+
+ul li:nth-child(5) span{/*adiciona cor*/
+  background: #e4405f;
+}
+
+
